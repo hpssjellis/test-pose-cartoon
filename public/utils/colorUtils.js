@@ -13,12 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * =============================================================================
- */
+
 
 import {MathUtils} from './mathUtils';
 import * as paper from 'paper';
+ */
 
-export class Palette {
+
+
+//export class Palette {
+class Palette {
     constructor(colors) {
         let scope = paper.default;
         this.colors = colors.map(c => ({
@@ -42,7 +46,8 @@ export class Palette {
     }
 }
 
-export class ColorUtils {
+//export class ColorUtils {
+class ColorUtils {
     static addRGB(color, red, green, blue) {
         color.red = color.red + red;
         color.green = color.green + green;
