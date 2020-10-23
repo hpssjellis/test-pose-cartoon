@@ -13,10 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * =============================================================================
- */
+
 
 import * as posenet from '@tensorflow-models/posenet';
 import * as tf from '@tensorflow/tfjs';
+ */
+
+
+
 
 const color = 'aqua';
 const boundingBoxColor = 'red';
@@ -30,7 +34,8 @@ function isiOS() {
   return /iPhone|iPad|iPod/i.test(navigator.userAgent);
 }
 
-export function isMobile() {
+//export function isMobile() {
+function isMobile() {
   return isAndroid() || isiOS();
 }
 
@@ -50,7 +55,8 @@ function setDatGuiPropertyCss(propertyText, liCssString, spanCssString = '') {
 /**
  * Toggles between the loading UI and the main canvas UI.
  */
-export function toggleLoadingUI(
+//export function toggleLoadingUI(
+function toggleLoadingUI(
     showLoadingUI, loadingDivId = 'loading', mainDivId = 'main') {
   if (showLoadingUI) {
     document.getElementById(loadingDivId).style.display = 'block';
@@ -65,7 +71,8 @@ function toTuple({y, x}) {
   return [y, x];
 }
 
-export function drawPoint(ctx, y, x, r, color) {
+//export function drawPoint(ctx, y, x, r, color) {
+function drawPoint(ctx, y, x, r, color) {
   ctx.beginPath();
   ctx.arc(x, y, r, 0, 2 * Math.PI);
   ctx.fillStyle = color;
@@ -75,7 +82,8 @@ export function drawPoint(ctx, y, x, r, color) {
 /**
  * Draws a line on a canvas, i.e. a joint
  */
-export function drawSegment([ay, ax], [by, bx], color, scale, ctx) {
+//export function drawSegment([ay, ax], [by, bx], color, scale, ctx) {
+function drawSegment([ay, ax], [by, bx], color, scale, ctx) {
   ctx.beginPath();
   ctx.moveTo(ax * scale, ay * scale);
   ctx.lineTo(bx * scale, by * scale);
@@ -87,7 +95,8 @@ export function drawSegment([ay, ax], [by, bx], color, scale, ctx) {
 /**
  * Draws a pose skeleton by looking up all adjacent keypoints/joints
  */
-export function drawSkeleton(keypoints, minConfidence, ctx, scale = 1) {
+//export function drawSkeleton(keypoints, minConfidence, ctx, scale = 1) {
+function drawSkeleton(keypoints, minConfidence, ctx, scale = 1) {
   const adjacentKeyPoints =
       posenet.getAdjacentKeyPoints(keypoints, minConfidence);
 
@@ -101,7 +110,8 @@ export function drawSkeleton(keypoints, minConfidence, ctx, scale = 1) {
 /**
  * Draw pose keypoints onto a canvas
  */
-export function drawKeypoints(keypoints, minConfidence, ctx, scale = 1) {
+//export function drawKeypoints(keypoints, minConfidence, ctx, scale = 1) {
+function drawKeypoints(keypoints, minConfidence, ctx, scale = 1) {
   for (let i = 0; i < keypoints.length; i++) {
     const keypoint = keypoints[i];
 
@@ -117,7 +127,8 @@ export function drawKeypoints(keypoints, minConfidence, ctx, scale = 1) {
 /**
  * Draw an image on a canvas
  */
-export function renderImageToCanvas(image, size, canvas) {
+//export function renderImageToCanvas(image, size, canvas) {
+function renderImageToCanvas(image, size, canvas) {
   canvas.width = size[0];
   canvas.height = size[1];
   const ctx = canvas.getContext('2d');
@@ -125,7 +136,8 @@ export function renderImageToCanvas(image, size, canvas) {
   ctx.drawImage(image, 0, 0);
 }
 
-export function setStatusText(text) {
+//export function setStatusText(text) {
+function setStatusText(text) {
   const resultElement = document.getElementById('status');
   resultElement.innerText = text;
 }
