@@ -55,10 +55,10 @@ import * as tomNookSVG from './resources/illustration/tom-nook.svg';
 
 
 const girlSVG = "./svg/girl.svg"
-const boySVG = "./svg/girl.svg"
-const abstractSVG = "./svg/girl.svg"
-const blathersSVG = "./svg/girl.svg"
-const tomNookSVG = "./svg/girl.svg"
+const boySVG = "./svg/boy.svg"
+const abstractSVG = "./svg/abstract.svg"
+const blathersSVG = "./svg/blathers.svg"
+const tomNookSVG = "./svg/tom-nook.svg"
 
 
 
@@ -275,6 +275,8 @@ function setupCanvas() {
     videoHeight *= 0.7;
   }  
 
+ 
+ 
   canvasScope = paper.default;
   let canvas = document.querySelector('.illustration-canvas');;
   canvas.width = canvasWidth;
