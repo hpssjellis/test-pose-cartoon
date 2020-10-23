@@ -13,11 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * =============================================================================
- */
+
 
 import * as paper from 'paper';
 
-export class SVGUtils {
+ */
+
+
+
+//export class SVGUtils {
+class SVGUtils {
     static importSVG(file) {
         let svgScope = new paper.default.PaperScope();
         let canvas = svgScope.createCanvas(0, 0);
