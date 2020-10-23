@@ -37,10 +37,31 @@ import * as abstractSVG from './resources/illustration/abstract.svg';
 import * as blathersSVG from './resources/illustration/blathers.svg';
 import * as tomNookSVG from './resources/illustration/tom-nook.svg';
 
-*/
+
 
 
  
+
+
+
+<script src="./svg/girl.svg"></script>
+<script src="./svg/boy.svg"></script>
+<script src="./svg/abstract.svg"></script>
+<script src="./svg/blathers.svg"></script>
+<script src="./svg/tom-nook.svg"></script>
+
+
+*/
+
+
+const girlSVG = "./svg/girl.svg"
+const boySVG = "./svg/girl.svg"
+const abstractSVG = "./svg/girl.svg"
+const blathersSVG = "./svg/girl.svg"
+const tomNookSVG = "./svg/girl.svg"
+
+
+
 
 
 // Camera stream video element
