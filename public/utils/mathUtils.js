@@ -19,7 +19,8 @@ function getDistance(p0, p1) {
     return Math.sqrt((p0.x - p1.x) * (p0.x - p1.x) + (p0.y - p1.y) * (p0.y - p1.y));
 }
 
-export class MathUtils {
+//export class MathUtils {
+class MathUtils {
     static lerp(v0, v1, perc) {
         return v0 + (v1 - v0) * perc;
     }
