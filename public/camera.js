@@ -47,8 +47,12 @@ import * as tomNookSVG from './resources/illustration/tom-nook.svg';
 
  
  <!-- Adds the WASM backend to the global backend registry -->
+  
  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-wasm@2.0.0/dist/tf-backend-wasm.js"></script>
+
+
  <script src="./utils/svgUtils"></script>
+ <script src="./utils/demoUtils"></script>
  <script src="./utils/fileUtils"></script>
  <script src="./illustrationGen/illustration"></script>
  <script src="./illustrationGen/skeleton"></script>
