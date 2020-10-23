@@ -201,7 +201,8 @@ class KeySpline {
     }
 };
 
-export class MultiSpline {
+//export class MultiSpline {
+class MultiSpline {
     constructor() {
         this.keySplines = [];
         this.segments = [];
