@@ -13,12 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * =============================================================================
- */
+
 
 import { Bone, allPartNames, Skeleton } from './skeleton';
 import { MathUtils } from '../utils/mathUtils';
 import { SVGUtils } from '../utils/svgUtils';
 import { ColorUtils } from '../utils/colorUtils';
+
+
+ */
+
+
 
 const allPartNamesMap = {};
 allPartNames.forEach(name => allPartNamesMap[name] = 1);
@@ -26,7 +31,8 @@ allPartNames.forEach(name => allPartNamesMap[name] = 1);
 const MIN_CONFIDENCE_PATH_SCORE = 0.3;
 
 // Represents a skinned illustration.
-export class PoseIllustration {
+//export class PoseIllustration {
+ class PoseIllustration {
     constructor(scope) {
         this.scope = scope;
         this.frames = [];
