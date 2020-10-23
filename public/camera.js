@@ -286,7 +286,8 @@ function setupCanvas() {
  * Kicks off the demo by loading the posenet model, finding and loading
  * available camera devices, and setting off the detectPoseInRealTime function.
  */
-export async function bindPage() {
+//export async function bindPage() {
+async function bindPage() {
   setupCanvas();
 
   toggleLoadingUI(true);
