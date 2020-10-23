@@ -13,12 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * =============================================================================
- */
+
 
 import * as paper from 'paper';
 import { SVGUtils } from '../utils/svgUtils';
 import { MathUtils } from '../utils/mathUtils';
 import { ColorUtils } from '../utils/colorUtils';
+
+*/
+
 
 const MIN_POSE_SCORE = 0.1;
 const MIN_FACE_SCORE = 0.8;
@@ -28,7 +31,8 @@ const posePartNames = ['leftAnkle', 'leftKnee', 'leftHip', 'leftWrist', 'leftElb
     'leftEar', 'rightEar'];
 
 // Mapping between face part names and their vertex indices in TF face mesh.
-export const facePartName2Index = {
+//export const facePartName2Index = {
+const facePartName2Index = {
     'topMid': 10,
     'rightTop0': 67,
     'rightTop1': 54,
@@ -120,10 +124,12 @@ const facePartNames = [
     'leftLowerLipTop0', 'lowerLipTopMid', 'rightLowerLipTop0', // 65 - 67
 ];
 
-export const allPartNames = posePartNames.concat(facePartNames);
+//export const allPartNames = posePartNames.concat(facePartNames);
+const allPartNames = posePartNames.concat(facePartNames);
 
 // Represents a bone formed by two part keypoints.
-export class Bone {
+//export class Bone {
+class Bone {
     set(kp0, kp1, skeleton, type) {
         this.name = `${kp0.name}-${kp1.name}`;
         this.kp0 = kp0;
@@ -196,7 +202,8 @@ function getKeypointFromFaceFrame(face, i) {
 }
 
 // Represents a full body skeleton.
-export class Skeleton {
+//export class Skeleton {
+class Skeleton {
     constructor(scope) {
         let skeletonGroup = SVGUtils.findFirstItemWithPrefix(scope.project, 'skeleton');
         // Pose
