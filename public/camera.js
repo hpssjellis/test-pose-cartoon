@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * =============================================================================
- */
+ 
 
 import * as posenet_module from '@tensorflow-models/posenet';
 import * as facemesh_module from '@tensorflow-models/facemesh';
@@ -29,11 +29,54 @@ import {PoseIllustration} from './illustrationGen/illustration';
 import {Skeleton, facePartName2Index} from './illustrationGen/skeleton';
 import {FileUtils} from './utils/fileUtils';
 
+
 import * as girlSVG from './resources/illustration/girl.svg';
 import * as boySVG from './resources/illustration/boy.svg';
 import * as abstractSVG from './resources/illustration/abstract.svg';
 import * as blathersSVG from './resources/illustration/blathers.svg';
 import * as tomNookSVG from './resources/illustration/tom-nook.svg';
+
+*/
+
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.6/dat.gui.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/r16/Stats.min.js"></script> 
+    
+ <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0"></script>
+ <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/posenet@2.2.1"></script>
+
+ 
+ <!-- Adds the WASM backend to the global backend registry -->
+ <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-wasm@2.0.0/dist/tf-backend-wasm.js"></script>
+ <script src="./utils/svgUtils"></script>
+ <script src="./utils/fileUtils"></script>
+ <script src="./illustrationGen/illustration"></script>
+ <script src="./illustrationGen/skeleton"></script>
+
+
+
+
+<script src="https://unpkg.com/@babel/standalone@7.12.4/babel.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.117.1/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/scatter-gl@0.0.5/lib/scatter-gl.min.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/facemesh@0.0.3"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/paper@0.12.11/dist/paper-full.min.js"></script>
+
+
+
+<script src="./svg/girl.svg"></script>
+<script src="./svg/boy.svg"></script>
+<script src="./svg/abstract.svg"></script>
+<script src="./svg/blathers.svg"></script>
+<script src="./svg/tom-nook.svg"></script>
+
+
+
+
 
 // Camera stream video element
 let video;
