@@ -15,7 +15,8 @@
  * =============================================================================
  */
 
-export class FileUtils {
+//export class FileUtils {
+class FileUtils {
     static setDragDropHandler(handler) {
         window.addEventListener("dragover", function (e) {
             e = e || event;
